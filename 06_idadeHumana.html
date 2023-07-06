@@ -8,11 +8,21 @@
     // - cães grandes: fator 7.
 
     // ENTRADA
-
-    
+    let pCao = prompt("Qual o porte do seu cão? \n porte pequeno: P \n porte médio: M \n porte grande: G").toLowerCase();
+    const iCao = Number(prompt("Qual a idade do seu cão?"));
     // PROCESSAMENTO
-
-    
-    // SAÍDA
-
+    switch (pCao) {
+        case "p":
+        alert("A idade do seu cão é de: " + (iCao * 5) + " anos");
+            break;
+        case "m":
+        alert("A idade do seu cão é de: " + (iCao * 6) + " anos");
+            break;
+        case "g":
+        alert("A idade do seu cão é de: " + (iCao * 7) + " anos");
+            break;
+        default:
+        alert("Invalido, Informe apenas P, M ou G");
+            break;
+    }
     </script>

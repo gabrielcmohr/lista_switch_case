@@ -8,11 +8,59 @@
     */
 
     //ENTRADA
-
-
+    const num1 = Number(prompt("Informe o primeiro número:").trim().replace(",", "."));
+    const num2 = Number(prompt("Informe o segundo número:").trim().replace(",", "."));
+    const op = prompt("Informe uma operação que deseja realizar: \n soma: ( + ), subtração: ( - ) \n multiplicação: ( * ), divisão: ( / )").trim()
+    let mensagem = "";
     //PROCESSAMENTO
-
+    switch (op) {
+        case "+":
+            mensagem += conta = num1 + num2
+            break;
+        case "-":
+            mensagem += conta = num1 - num2
+            break;
+        case "*":
+            mensagem += conta = num1 * num2
+            break;
+        case "/":
+            mensagem += conta = num1 / num2
+            break;
+        default:
+            alert("Valor Inválido.")
+            break;
+    }
+    switch (conta % 2) {
+        case 0:
+            mensagem += " é par, "
+            break;
     
+        default:
+            mensagem += " é impar, "
+            break;
+    }
+    switch (Math.sign(conta)) {
+        case 1:
+            mensagem += "positivo e "
+            break;
+    
+        case -1:
+            mensagem += "negativo e "
+            break;
+        default: 
+            mensagem += "e "
+            break;
+    }
+    switch (conta - Math.round(conta)) {
+        case 0:
+            mensagem += "inteiro."
+            break;
+    
+        default:
+            mensagem += "decimal."
+            break;
+    }
     //SAÍDA
+    alert(mensagem)
 
 </script>

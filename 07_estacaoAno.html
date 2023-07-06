@@ -6,11 +6,60 @@
     */
 
     //ENTRADA
-
-    
+    const hemisferio = prompt('Que hemisfério você está? Reponda S para sul e N para norte').toUpperCase().trim()
+    const mes = prompt(`Em que mês você está?`).trim().toLowerCase()
+    let mensagem = " "
     //PROCESSAMENTO
-
-
+    switch (hemisferio) {
+        case "N":
+            switch (mes) {
+                case "julho":
+                case "agosto":
+                case "setembro":
+                    mensagem = `Verão`
+                    break;
+                case "outubro":
+                case "novembro":
+                case "dezemebro":
+                    mensagem = "Outono"
+                    break;
+                case "janeiro":
+                case "fevereiro":
+                case "março":
+                    mensagem = `Inverno`
+                    break;
+                case "abril":
+                case "maio":
+                case "junho":
+                    mensagem = `Primavera`
+                    break;
+            }
+    }
+    switch (hemisferio) {
+        case "S":
+            switch (mes) {
+                case "julho":
+                case "agosto":
+                case "setembro":
+                    mensagem = `Inverno`
+                    break;
+                case "outubro":
+                case "novembro":
+                case "dezemebro":
+                    mensagem = "Primavera"
+                    break
+                case "janeiro":
+                case "fevereiro":
+                case "março":
+                    mensagem = `Verão`
+                    break;
+                case "abril":
+                case "maio":
+                case "junho":
+                    mensagem = `Outono`
+                    break;
+            }
+    }
     //SAÍDA
-
+    alert(mensagem)
 </script>
